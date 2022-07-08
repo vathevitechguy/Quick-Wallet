@@ -2,12 +2,10 @@
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
-// BANKIST APP
+// Quick Wallet App
 
 /////////////////////////////////////////////////
-// Data
-
-// DIFFERENT DATA! Contains movement dates, currency and locale
+// Preset User Data
 
 const account1 = {
   owner: 'Jonas Schmedtmann',
@@ -230,7 +228,7 @@ const starteLogOutTimer = function () {
   };
 
   // Set time to 5 minutes
-  let time = 100;
+  let time = 600;
   
   // Call the timer every seconds
   counter();
@@ -278,14 +276,6 @@ btnLogin.addEventListener('click', function (e){
     }
     // const locale = navigator.language; // This will check for the browser language on the browser
     labelDate.textContent = new Intl.DateTimeFormat(currentAccount.locale, options).format(now);
-    
-    // const now = new Date();
-    // const day = `${now.getDate()}`.padStart(2,0);
-    // const month = `${now.getMonth() + 1}`.padStart(2,0);
-    // const year = now.getFullYear();
-    // const hour = `${now.getHours()}`.padStart(2,0);
-    // const min = now.getMinutes();
-    // labelDate.textContent= `${day}/${month}/${year}, ${hour}: ${min}`;
     
     //Update UI
     updateUI(currentAccount);
